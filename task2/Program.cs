@@ -5,18 +5,19 @@
 // a = 2 b = 10 -> max = 10
 // a = -9 b = -3 -> max = -3
 
-Console.WriteLine("Введите первое число: ");
-int numberA = int.Parse(Console.ReadLine());
-Console.WriteLine("Введите второе число: ");
-int numberB = int.Parse(Console.ReadLine());
-
-if(numberA > numberB)
+Console.Write("Введите первое число: ");
+int A = int.Parse(Console.ReadLine());
+Console.Write("Введите второе число: ");
+int B = int.Parse(Console.ReadLine());
+int max = A;
+int min = B;
+if(A > B)
 { 
-    Console.WriteLine("Первое число - max");
-    Console.WriteLine("Второе число - min");
+    Console.WriteLine("Максимальное число " + max);
+    Console.WriteLine("Миниальное число " + min);
 }
 else
 {
-    Console.WriteLine("Первое число - min");
-    Console.WriteLine("Второе число - max");
+    Console.WriteLine("Максимальное число " + min);
+    Console.WriteLine("Минимальное число " + max);
 }
