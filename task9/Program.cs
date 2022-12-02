@@ -14,4 +14,8 @@ if(max<a2)
 {
     max = a2;
 }
+else
+{
+    Console.WriteLine("Числа равны");
+}
 Console.WriteLine($"Максимальная цифра в числе {num} -- > {max}");
