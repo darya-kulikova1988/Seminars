@@ -18,4 +18,4 @@ else
 {
     Console.Write("Число не кратно, остаток " + result);
 }
-// 
+
