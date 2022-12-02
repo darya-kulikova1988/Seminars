@@ -8,13 +8,16 @@
 Console.Write("Введите число: ");
 int a = int.Parse(Console.ReadLine()!);
 int n = 10;
-int count = 0;
-while (a > 0)
-    {
-    a = a/n; 
-    count++;
-    }
-Console.WriteLine(count);
+// int count = 0;
+
+// while (a > 0)
+//     {
+//     a = a/n; 
+//     count++;
+//     }
+// Console.WriteLine(count);
+// Console.WriteLine("Третья цифра: " + a%10000000/1000000);
+Console.WriteLine("Третья цифра: " + a%(Math.Pow(n,(-2+9)))/Math.Pow(n,(-3+9)));
 
 // Console.WriteLine("Третья цифра: " + a%n);
 // while ((a/(n*10)) > n/10 & (a/(n*10)<n))
