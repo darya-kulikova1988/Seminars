@@ -5,38 +5,70 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
+
 Console.Write("Введите число: ");
 int a = int.Parse(Console.ReadLine()!);
-int n = 10;
-// int count = 0;
+int count = 0;
+int a1 = a;
+while (a1 != 0)
+    {
+    a1 = a1/10; 
+    count++;
+    }
+// Console.WriteLine("Счетчик равен " + count);
+int result = (int)(a %(Math.Pow(10,(-2+count)))/(Math.Pow(10,(-3+count))));
+if (count < 3)
+{
+   Console.WriteLine("Третьей цифры нет");
+}
+else if (count > 2)
+{
+    if (result < 0)
+    {
+        result = result * -1;
+    }    
+Console.WriteLine("Третья цифра: " + result);
+}
 
-// while (a > 0)
+
+// __________________________________________________________________________________
+// ОСТАВИЛА ЗДЕСЬ ДЛЯ СРАВНЕНИЯ
+
+// Console.Write("Введите число: ");
+// int a = int.Parse(Console.ReadLine()!);
+// int count = int.Parse(Console.ReadLine()!);
+// int b = Convert.ToInt32(Math.Pow(10,(-2+count)));
+// int c = Convert.ToInt32(Math.Pow(10,(-3+count)));
+// int result = a%b/c;
+// Console.WriteLine(b);
+// Console.WriteLine(c);
+// Console.WriteLine("Третья цифра: " + result);
+
+// Работает, но иногда дает сбой, показывает 2 цифру или 4
+
+// Console.Write("Введите число: ");
+// int a = int.Parse(Console.ReadLine()!);
+// int b = 10;
+// int count = 0;
+// int a1 = a;
+// while (a1 != 0)
 //     {
-//     a = a/n; 
+//     a1 = a1/n; 
 //     count++;
 //     }
-// Console.WriteLine(count);
-// Console.WriteLine("Третья цифра: " + a%10000000/1000000);
-Console.WriteLine("Третья цифра: " + a%(Math.Pow(n,(-2+9)))/Math.Pow(n,(-3+9)));
-
-// Console.WriteLine("Третья цифра: " + a%n);
-// while ((a/(n*10)) > n/10 & (a/(n*10)<n))
-//    {
-//     if ((a/(n*10)) > n/10 & (a/(n*10)<n))    //526855 n=10  n=100 n=1000
-//     {
-//         Console.WriteLine("Третья цифра: " + a%n);
-//     }
-//     else
-//     {
-
-//     }
-//   n = n * 10;}
- 
-
-// int sqrt_n = n*n;
-// if (a/(sqrt_n) > n/n & a/sqrt_n < n)
+// Console.WriteLine("Счетчик равен " + count);
+// int result = Convert.ToInt32(a%(Math.Pow(n,(-2+count)))/Math.Pow(n,(-3+count)));
+// if (count < 3)
 // {
-//     Console.WriteLine("Третья цифра: " + a%n);
+//    Console.WriteLine("Третьей цифры нет");
+// }
+// else if (count > 2)
+// {
+//     if (result < 0)
+//     {
+//         result = result * -1;
+//     }    
+// Console.WriteLine("Третья цифра: " + result);
 // }
 
 // не универсальное решение
