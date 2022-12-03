@@ -22,14 +22,37 @@
 
 // Число превращается в строку
 
+// Console.Write("Введите число: ");
+// int a = Math.Abs(int.Parse(Console.ReadLine()!));
+// string aString = a.ToString();
+// if (aString.Length >= 3)
+// {
+//     Console.WriteLine(aString[2]);
+// }
+// else
+// {
+//     Console.WriteLine("Третьей цифры нет");
+// }
+
 Console.Write("Введите число: ");
 int a = Math.Abs(int.Parse(Console.ReadLine()!));
-string aString = a.ToString();
-if (aString.Length >= 3)
+int count = 0;
+int a1 = a;
+while (a1 != 0)
 {
-    Console.WriteLine(aString[2]);
+    a1 = a1 / 10;
+    count++;
+}
+if (count < 3)
+{
+    Console.WriteLine("Третьей цифры нет");
 }
 else
 {
-    Console.WriteLine("Третьей цифры нет");
+    while (count-3>0)
+    {
+        a=a/10;
+        count--;
+    }
+    Console.WriteLine("Третья цифра: " + a%10); // % - остаток от целочисленного деления
 }
