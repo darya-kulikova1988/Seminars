@@ -9,6 +9,11 @@ int N = int.Parse(Console.ReadLine()!);
 int B = 1;
 while (B <= N)
 {
-    Console.Write(B * B + ", ");
+    if (B == N)
+    { Console.Write(B * B + "."); }
+    else
+    {
+        Console.Write(B * B + ", ");
+    }
     B++;
 }
