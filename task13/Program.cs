@@ -88,7 +88,7 @@ Console.WriteLine("Третья цифра: " + result);
 //     Console.WriteLine("Третья цифра: " + a%1000/100);
 // }
 
-// способ преподователя
+// способ преподавателя
 
 // Console.Clear();
 // Console.Write("Введите число: ");
