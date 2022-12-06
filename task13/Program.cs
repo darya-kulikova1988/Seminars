@@ -5,7 +5,6 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
-
 Console.Write("Введите число: ");
 int a = int.Parse(Console.ReadLine()!);
 int count = 0;
@@ -44,7 +43,7 @@ Console.WriteLine("Третья цифра: " + result);
 // Console.WriteLine(c);
 // Console.WriteLine("Третья цифра: " + result);
 
-// Работает, но иногда дает сбой, показывает 2 цифру или 4
+// Работает, но иногда дает сбой, показывает 2 цифру или 4!!!
 
 // Console.Write("Введите число: ");
 // int a = int.Parse(Console.ReadLine()!);
@@ -87,4 +86,24 @@ Console.WriteLine("Третья цифра: " + result);
 // if (a/100 >100 & a/100 <1000)
 // {
 //     Console.WriteLine("Третья цифра: " + a%1000/100);
+// }
+
+// способ преподователя
+
+// Console.Clear();
+// Console.Write("Введите число: ");
+// int num = int.Parse(Console.ReadLine());
+// if (num < 100)
+// {
+//     Console.WriteLine($"Третьей цифры нет");
+
+// }
+// else
+// {
+//     while (num >= 1000)
+//     {
+//         num = num / 10;
+//     }
+//     int thirdNumber = num % 10;
+//     Console.WriteLine($"Третья цифра числа -> {thirdNumber}");
 // }
