@@ -10,16 +10,13 @@ int Sum(int number)
 {
     int sum = 0;
     int num1 = 0;
-    int sumTotal = 0;
-    while (number > 10)
+    while (number > 0)
     {
         num1 = number % 10;
         sum = sum + num1;
         number = number / 10;
     }
-    if (number < 10)
-    { sumTotal = sum + number; }
-    return sumTotal;
+    return sum;
 }
 
 
