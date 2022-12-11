@@ -11,9 +11,17 @@ Console.WriteLine($"A в степени B = {GetDegree(A, B)}");
 int GetDegree(int numA, int numB)
 {
     int degree = 1;
-    degree = (int)Math.Pow(numA, numB);
+    int num = 1;
+    while (num <= numB)
+    {
+        degree = degree * numA;
+        num++;
+    }
+    // degree = (int)Math.Pow(numA, numB);
     return degree;
 }
+
+
 
 
 // решение не методом
