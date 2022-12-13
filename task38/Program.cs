@@ -33,16 +33,30 @@ int[] array = new int[5];
 FillArray(array);
 PrintArray(array);
 
-Console.Write(" -> Разница между максимальным и минимальным элементами массива = ");
+Console.Write($" -> Разница между максимальным и минимальным элементами массива = {SumMaxMin(5)}");
 
-int max = array[0];
-int min = array[0];
-
-for (int i = 0; i < array.Length; i++)
+int SumMaxMin(int i)
 {
-    if (array[i] > max) max = array[i];
-    else if (array[i] < min) min = array[i];
+    int max = array[0];
+    int min = array[0];
+
+    for (i = 0; i < array.Length; i++)
+    {
+        if (array[i] > max) max = array[i];
+        else if (array[i] < min) min = array[i];
+    }
+    int result = max - min;
+    return result;
 }
-int result = max - min;
-Console.Write(result);
-// Console.Write($" {max} {min}");
+
+
+// int max = array[0];
+// int min = array[0];
+// for (int i = 0; i < array.Length; i++)
+// {
+//     if (array[i] > max) max = array[i];
+//     else if (array[i] < min) min = array[i];
+// }
+// int result = max - min;
+// Console.Write(result);
+// // Console.Write($" {max} {min}");
