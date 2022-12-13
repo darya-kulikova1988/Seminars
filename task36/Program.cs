@@ -14,19 +14,26 @@ int[] GetArray(int size) // int [] - описание метода
     }
     return res;
 }
-void PrintArray(int[] arr)
+void PrintArray(int[] col)
 {
-    for (int j = 0; j < arr.Length; j++)
+    int count = col.Length;
+    int position = 0;
+    while (position < count)
     {
-        Console.Write($"{arr[j]} ");
+        if (position == count - 1) { Console.Write(col[position] + "]"); }
+        else if (position == 0) { Console.Write("[" + col[position] + ", "); }
+        else
+        {
+            Console.Write(col[position] + ", ");
+        }
+        position++;
     }
 }
 Console.Write("Введите количество элементов массива: ");
 int n = int.Parse(Console.ReadLine()!);
 int[] array = GetArray(n);
-Console.Write("[");
 PrintArray(array);
-Console.Write("] --> Cумма элементов, стоящих на нечётных позициях = ");
+Console.Write(" --> Cумма элементов, стоящих на нечётных позициях = ");
 int sum = 0;
 for (int i = 0; i < array.Length; i++)
 {
