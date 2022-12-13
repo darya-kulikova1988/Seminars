@@ -22,7 +22,7 @@ void PrintArray(int[] size)
 int[] array = GetArray(4);
 Console.Write("[ ");
 PrintArray(array);
-Console.Write("]-- > [ ");
+Console.Write("]-- > [");
 for (int i = 0; i < array.Length; i++)
 {
     Console.Write(array[i] * -1 + " ");
