@@ -11,11 +11,19 @@ int[] GetArray(int size) // int [] - описание метода
     }
     return res;
 }
-void PrintArray(int[] arr)
+void PrintArray(int[] col)
 {
-    for (int j = 0; j < arr.Length; j++)
+    int count = col.Length;
+    int position = 0;
+    while (position < count)
     {
-        Console.Write($"{arr[j]} ");
+        if (position == count - 1) { Console.Write(col[position] + "]"); }
+        else if (position == 0) { Console.Write("[" + col[position] + ", "); }
+        else
+        {
+            Console.Write(col[position] + ", ");
+        }
+        position++;
     }
 }
 int[] array = GetArray(5);
@@ -35,11 +43,11 @@ while (i < array.Length)
 }
 if (count == 0)
 {
-    Console.Write("Нет");
+    Console.Write(" --> Нет");
 }
 else
 {
-    Console.Write("Да");
+    Console.Write(" --> Да");
 }
 
 
