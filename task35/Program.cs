@@ -13,11 +13,19 @@ int[] GetArray(int size) // int [] - описание метода
     }
     return res;
 }
-void PrintArray(int[] arr)
+void PrintArray(int[] col)
 {
-    for (int j = 0; j < arr.Length; j++)
+    int count = col.Length;
+    int position = 0;
+    while (position < count)
     {
-        Console.Write($"{arr[j]} ");
+        if (position == count - 1) { Console.Write(col[position] + "]"); }
+        else if (position == 0) { Console.Write("[" + col[position] + ", "); }
+        else
+        {
+            Console.Write(col[position] + ", ");
+        }
+        position++;
     }
 }
 int[] array = GetArray(123);
@@ -34,4 +42,4 @@ foreach (int el in array)
 }
 Console.WriteLine();
 Console.WriteLine();
-Console.WriteLine($"Rоличество элементов массива, значения которых лежат в отрезке [10,99] = {count}");
+Console.WriteLine($"Количество элементов массива, значения которых лежат в отрезке [10,99] = {count}");
