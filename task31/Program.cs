@@ -13,18 +13,26 @@ int[] GetArray(int size, int minValue, int maxValue) // int [] - описани�
     return res;
 }
 
-void PrintArray(int[] arr)
+void PrintArray(int[] col)
 {
-    for (int i = 0; i < arr.Length; i++)
+    int count = col.Length;
+    int position = 0;
+    while (position < count)
     {
-        Console.Write($"{arr[i]} ");
+        if (position == count - 1) { Console.Write(col[position] + "]"); }
+        else if (position == 0) { Console.Write("[" + col[position] + ", "); }
+        else
+        {
+            Console.Write(col[position] + ", ");
+        }
+        position++;
     }
 }
 
 int[] array = GetArray(12, -9, 9);
 PrintArray(array);
-Console.WriteLine();
-Console.WriteLine(string.Join(" ", array));
+// Console.WriteLine();
+// Console.WriteLine(string.Join(" ", array));
 
 int positiveSum = 0;
 int negativeSum = 0;
