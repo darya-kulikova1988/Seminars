@@ -9,7 +9,7 @@ int[] GetArray(int size) // int [] - описание метода
     int[] res = new int[size];  // инициализация массива 
     for (int i = 0; i < size; i++)
     {
-        res[i] = new Random().Next(0, 15);
+        res[i] = new Random().Next(0, 1000);
     }
     return res;
 }
@@ -20,7 +20,7 @@ void PrintArray(int[] arr)
         Console.Write($"{arr[j]} ");
     }
 }
-int[] array = GetArray(5);
+int[] array = GetArray(123);
 PrintArray(array);
 
 
@@ -33,4 +33,5 @@ foreach (int el in array)
     }
 }
 Console.WriteLine();
-Console.WriteLine(count);
+Console.WriteLine();
+Console.WriteLine($"Rоличество элементов массива, значения которых лежат в отрезке [10,99] = {count}");
