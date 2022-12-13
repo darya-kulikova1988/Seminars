@@ -29,14 +29,27 @@ void PrintArray(int[] col)
         position++;
     }
 }
+
 Console.Write("Введите количество элементов массива: ");
 int n = int.Parse(Console.ReadLine()!);
 int[] array = GetArray(n);
 PrintArray(array);
-Console.Write(" --> Cумма элементов, стоящих на нечётных позициях = ");
-int sum = 0;
-for (int i = 0; i < array.Length; i++)
+Console.WriteLine($" --> Cумма элементов, стоящих на нечётных позициях = {SumOfArray(n)}");
+
+int SumOfArray(int i)
 {
-    if (i % 2 != 0) sum = sum + array[i];
+    int sum = 0;
+    for (i = 0; i < array.Length; i++)
+    {
+        if (i % 2 != 0) sum = sum + array[i];
+    }
+    return sum;
 }
-Console.Write(sum);
+
+// Console.Write(" --> Cумма элементов, стоящих на нечётных позициях = ");
+// int sum = 0;
+// for (int i = 0; i < array.Length; i++)
+// {
+//     if (i % 2 != 0) sum = sum + array[i];
+// }
+// Console.Write(sum);
