@@ -39,3 +39,4 @@ Console.WriteLine($" -> Сумма положительных чисел = {posi
 
 // int[] array1 = GetArray(20, 0, 15);
 // PrintArray(array1);
+
