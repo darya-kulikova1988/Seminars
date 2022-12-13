@@ -31,15 +31,19 @@ int n = int.Parse(Console.ReadLine()!);
 int[] array = GetArray(n);
 
 PrintArray(array);
-Console.Write($" --> ");
+Console.Write($" --> {CountChar(n)}");
 
-int count = 0;
-foreach (int el in array)
+int CountChar(int m)
 {
-    if (el % 2 == 0)
+    int count = 0;
+    foreach (int el in array)
     {
-        count++;
+        if (el % 2 == 0)
+        {
+            count++;
+        }
     }
+    return count;
 }
-Console.Write(count);
+// Console.Write(count);
 
