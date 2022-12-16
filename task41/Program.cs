@@ -2,7 +2,7 @@
 // Split() ?
 // 0, 7, 8, -2, -2 -> 2
 // 1, -7, 567, 89, 223-> 3
-Console.Write("Введите массив, содержащий M символов = ");
+Console.Write("Введите количество символов M, содержащихся в массиве: ");
 int M = int.Parse(Console.ReadLine()!);
 int[] array = GetArray(M);
 
