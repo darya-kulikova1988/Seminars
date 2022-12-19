@@ -13,16 +13,23 @@ Console.Write("Введите b2 = ");
 double b2 = double.Parse(Console.ReadLine()!);
 Console.Write("Введите k2 = ");
 double k2 = double.Parse(Console.ReadLine()!);
-Console.Write("Точка пересечения заданных прямых: ");
 Point(b1, k1, b2, k2);
 
 void Point(double b1, double k1, double b2, double k2)
 {
     double x = 0;
     double y = 0;
-    y = (k1 * b2 - k2 * b1) / (k1 - k2);
-    x = (y - b2) / k2;
-    Console.WriteLine($"({x}; {y})");
+    if (k1 == k2 && b1 != b2) Console.WriteLine("Прямые параллельны, точек пересечения нет");
+    else if (k1 == k2 && b1 == b2)
+    {
+        Console.WriteLine("Прямые совпадают");
+    }
+    else
+    {
+        y = (k1 * b2 - k2 * b1) / (k1 - k2);
+        x = (y - b2) / k2;
+        Console.WriteLine($"Точка пересечения заданных прямых: ({x}; {y})");
+    }
 }
 // Console.WriteLine(Math.Round((decimal)x, 2));
 
