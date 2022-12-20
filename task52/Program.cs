@@ -32,29 +32,20 @@ void PrintArray(int[,] inArray)
 
 void SumAvg(int[,] inArray)
 {
-    // double sumAverage = 0;
-    int sum = 0;
+    double sumAverage = 1;
+
     for (int j = 0; j < inArray.GetLength(1); j++)
     {
+        double sum = 0;
         for (int i = 0; i < inArray.GetLength(0); i++)
         {
             sum = sum + inArray[i, j];
-
-            // sumAverage = sumAverage + inArray[i, j];
-            // sumAverage = Math.Round((sumAverage+inArray[i,j] / inArray.GetLength(0)), 1);
-            // if (i == j)
-            // {
-            //     sum = sum + inArray[i, j];
-            //     if (i < inArray.GetLength(0) - 1) { Console.Write(inArray[i, j] + " + "); }
-            //     if (i == inArray.GetLength(0) - 1) { Console.Write(inArray[i, j] + " = "); }
-            // }
+            sumAverage = sum / inArray.GetLength(0);
         }
-        Console.Write(sum + "; ");
-        // sumAverage = Math.Round((sum / inArray.GetLength(0)), 1);
+        Console.Write(Math.Round(sumAverage, 1) + "; ");
     }
 
 }
-
 
 Console.Write("Введите количество строк массива: ");
 int rows = int.Parse(Console.ReadLine()!);
