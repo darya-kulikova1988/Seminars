@@ -33,7 +33,6 @@ void PrintArray(int[,] inArray)
 void SumAvg(int[,] inArray)
 {
     double sumAverage = 1;
-
     for (int j = 0; j < inArray.GetLength(1); j++)
     {
         double sum = 0;
@@ -44,7 +43,6 @@ void SumAvg(int[,] inArray)
         }
         Console.Write(Math.Round(sumAverage, 1) + "; ");
     }
-
 }
 
 Console.Write("Введите количество строк массива: ");
