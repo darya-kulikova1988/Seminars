@@ -3,15 +3,10 @@
 // A = 3; B = 5 -> 243 (3⁵)
 // A = 2; B = 3 -> 8
 
-int SumOfChar(int A)
+int PowerRec(int a, int n)
 {
-    if (A > 0)
-    {
-        return A = A % 10 + SumOfChar(A / 10);
-    }
-    else
-    {
-        return 0;
-    }
+    return n == 0 ? 1 : PowerRec(a, n - 1) * a;
+    // if (n == 0) return 1;
+    // else return PowerRec(a, n - 1) * a;
 }
-Console.Write(543 + "-->" + SumOfChar(543));
+Console.WriteLine(PowerRec(2, 5));
