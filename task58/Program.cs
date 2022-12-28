@@ -34,7 +34,8 @@ void PrintArray(int[,] inArray)
 void MultiArray(int[,] inArray1, int[,] inArray2)
 {
     int[,] newArray = new int[inArray1.GetLength(0), inArray2.GetLength(1)];
-    if (inArray1.GetLength(1) != inArray2.GetLength(0)) Console.WriteLine("Массивы нельзя перемножить");
+    if (inArray1.GetLength(1) != inArray2.GetLength(0))
+    { Console.WriteLine("Массивы нельзя перемножить"); }
     else
     {
         for (int i = 0; i < inArray1.GetLength(0); i++)
@@ -43,7 +44,7 @@ void MultiArray(int[,] inArray1, int[,] inArray2)
             {
                 for (int l = 0; l < inArray2.GetLength(0); l++)
                 {
-                    newArray[i, j] = inArray1[i, l] * inArray2[l, j] + newArray[i, j];
+                    newArray[i, j] += inArray1[i, l] * inArray2[l, j];
                 }
                 Console.Write(newArray[i, j] + " ");
             }
